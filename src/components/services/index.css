@@ -13,6 +13,8 @@
     margin-top: 10px;
     width: 500px;
     margin-bottom: 10px;
+
+
 }
 
 .card-title {
@@ -22,7 +24,7 @@
 
 .header img {
     width: 500px;
-    height: 300px;
+    height: 280px;
 }
 
 
@@ -39,14 +41,16 @@
     }
 
     .header img {
-        height: 200px;
-        width: 300px;
+        height: 180px;
+        width: 250px;
     }
+
     .card {
-        width: 300px;
+        width: 250px;
         margin-left: 10px;
-        margin-right: 10px;
+        margin-right: 10px;      
     }
+    
 }
 
 /* @media screen and (min-width: 2000) {

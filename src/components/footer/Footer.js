@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './index.css'
 
 const Footer = () => {
     return (
-        <footer className="footer bg-dark py-3">
-            <div className="contaienr">
-                <span className="text-muted text-center"> @Laundry-App 2022 </span>
+        <div className="footer-container">
+            <div className="footer">
+                <span className="footer-message"> @Laundry-App 2023 </span>
             </div>
-        </footer>
+        </div>
     )
 }
 

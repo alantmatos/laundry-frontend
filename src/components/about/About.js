@@ -3,7 +3,7 @@ import './index.css';
 
 const AboutUs = () => {
   return (
-    <div className="col about-container">
+    <div className="about-container">
 
 
 

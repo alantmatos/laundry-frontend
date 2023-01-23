@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRef } from 'react';
-import emailjs from 'emailjs-com';
 import './index.css';
 
 const Services = () => {

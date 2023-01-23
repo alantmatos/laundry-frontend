@@ -1,0 +1,48 @@
+.home-container {
+    background-color: var(--color-bg2);
+    color: var(--color-white);
+
+    height: 82.5vh;
+    width: 100vw;
+}
+
+.home{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.welcome-message {
+    display: block;
+    background-color: aliceblue;
+    color: black;
+    width: 100vw;
+    height: 100px;
+}
+
+/* .welcome-message p {
+    width: 50vw;
+} */
+
+
+
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    margin-top: 20px;
+    height: 30px;
+    width: 130px;
+    margin-bottom: 5px;
+
+    margin-left: 8px;
+    margin-right: 8px;
+
+    text-decoration: none;
+}
+

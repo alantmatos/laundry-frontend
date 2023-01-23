@@ -1,0 +1,38 @@
+.navbar-component {
+    background-color: #292e34;
+
+    width: 100vw;
+    height: 8vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.company-logo-container {
+    color: gainsboro;
+}
+
+.logo-container:hover {
+    color: white;
+}
+
+.nav-button {
+    margin-left: 10px;
+    color: #8FB0C9;
+}
+
+.nav-button:hover {
+    color: red;
+}
+
+.logo-container {
+    margin-left: 5px;
+}
+
+.navbar-buttons {
+    margin-left: 40px;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,19 @@
+.footer-container {
+    background-color: #292e34;
+
+    width: 100vw;
+    height: 8vh;
+
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+
+.footer-message {
+    color: gainsboro;
+}
