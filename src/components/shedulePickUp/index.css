@@ -1,0 +1,32 @@
+
+.schedule-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 83vh;
+    width: 100vw;
+}
+
+input{
+    height: 30px;
+    width: 300px;
+    margin-top: 1px;
+    margin-bottom: 4px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-message{
+    height: 100px;
+    width: 300px;
+}

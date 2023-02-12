@@ -1,42 +1,88 @@
-import React from 'react'
+import React from 'react';
+import { useState, useEffect } from 'react';
+import Modal from './Modal';
+import './index.css';
 
 const ReserveWasher = () => {
+
+  const [swasher, setSwasher] = useState();
+  const [mwasher, setMwasher] = useState();
+  const [lwasher, setLwasher] = useState();
+  const [modalDisplay, setModalDisplay] = useState(false);
+  const [washerCard, setWasherCard] = useState(true);
+  const [selectedWasher, setSelectedWasher] = useState();
+
+
+  useEffect(() => { getSmallWasher() }, [])
+  useEffect(() => { getMediumWasher() }, [])
+  useEffect(() => { getLargeWasher() }, [])
+
+  function getSmallWasher() {
+    fetch('http://localhost:3000/swasher')
+      .then(res => res.json())
+      .then(res => setSwasher(res))
+  };
+
+  function getMediumWasher() {
+    fetch('http://localhost:3000/mwasher')
+      .then(res => res.json())
+      .then(res => setMwasher(res))
+  };
+
+  function getLargeWasher() {
+    fetch('http://localhost:3000/lwasher')
+      .then(res => res.json())
+      .then(res => setLwasher(res))
+  };
+
+  function reserveWasher(washer) {
+    console.log("User selected Washer: ", washer)
+    setSelectedWasher(washer)
+    setWasherCard(!washerCard)
+    setModalDisplay(!modalDisplay)
+  }
+
+
+
+
   return (
-    <div className='reservewasher'>
+    <div className="washer-container">
+    {modalDisplay ? <Modal setModalDisplay={setModalDisplay} modalDisplay={modalDisplay} setWasherCard={setWasherCard} washerCard={washerCard} selectedWasher={selectedWasher}></Modal> : null}
+    
 
-{/* <form className="validated-form request-form"  noValidate>
-          <div className="mb-1">
-            <label className="form-label" htmlFor="name">Name</label>
-            <input className="form-control" type="text" id="name" name="name" required />
-          </div>
-          <div className="mb-1">
-            <label className="form-label" htmlFor="address">Address</label>
-            <input className="form-control" type="text" id="address" name="address" required />
-          </div>
-          <div className="mb-1">
-            <label className="form-label" htmlFor="email">Email</label>
-            <input className="form-control" type="text" id="email" name="email" required />
-          </div>
-          <div className="mb-1">
-            <label className="form-label" htmlFor="phone">Phone</label>
-            <input className="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-          </div>
+    {washerCard ?
+    <div>
+    {swasher ? <div className="washer-card" key={swasher.id}>
+      <img src={swasher.image} className="washer-card-img" alt="washer machine image" />
+      <div className="card-body">
+        <h5 className="card-title">Small</h5>
+        <button type='submit' className="reserve-washer-btn" onClick={(e) => { reserveWasher(swasher) }}>Reserve</button>
+      </div>
+    </div> : null}
 
-          <div className="mb-1 form-group">
-            <label className="form-label" htmlFor="date">Date</label>
-            <input className="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date" />
-          </div>
+    {mwasher ? <div className="washer-card" key={mwasher.id}>
+      <img src={swasher.image} className="washer-card-img" alt="washer machine image" />
+      <div className="card-body">
+        <h5 className="card-title">Medium</h5>
+        <button type='submit' className="reserve-washer-btn" onClick={(e) => { reserveWasher(mwasher) }}>Reserve</button>
+      </div>
+    </div> : null}
 
-          <div className="mb-1">
-            <label className="form-label" htmlFor="message">Message</label>
-            <textarea className="form-control" type="text" id="message" name="message" required></textarea>
-          </div>
-          <button className="btn btn-success">Send Request</button>
-          <a className="btn btn-secondary" href="/">Cancel</a>
-        </form> */}
+    {lwasher ? <div className="washer-card" key={lwasher.id}>
+      <img src={swasher.image} className="washer-card-img" alt="washer machine image" />
+      <div className="card-body">
+        <h5 className="card-title">Large</h5>
+        <button type='submit' className="reserve-washer-btn" onClick={(e) => { reserveWasher(lwasher) }}>Reserve</button>
+      </div>
+    </div> : null}
 
-        
-    </div>
+
+    
+    </div> : null }
+
+
+
+  </div>
   )
 }
 

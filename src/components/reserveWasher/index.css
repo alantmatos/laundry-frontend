@@ -1,9 +1,28 @@
-.reservewasher{
+.washer-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 }
 
+.washer-container {
+    height: 83vh;
+    width: 100vw;
+}
+
+.washer-card {
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 150px;
+    width: 100px;
+}
+
+.reserve-washer-btn {
+    height: 30px;
+    width: 60px;
+}

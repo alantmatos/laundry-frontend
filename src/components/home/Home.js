@@ -9,7 +9,6 @@ const Home = () => {
 
       <div className='home'>
 
-
         {/* <div className='welcome-message'>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -21,14 +20,14 @@ const Home = () => {
 
           <div>
             <button className='reserve-btn'>
-              <a className="btn-link" href="/reservewasher">Reserve Here</a>
+              <a className="btn-link" href="/reserve">Reserve Here</a>
             </button>
           </div>
 
 
           <div>
             <button className='schedule-btn'>
-              <a className="btn-link" href="/schedulepickUp">Schedule Here</a>
+              <a className="btn-link" href="/schedule">Schedule Here</a>
             </button>
           </div>
 

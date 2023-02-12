@@ -24,8 +24,8 @@ function App() {
       <Route path="/about" element={<About></About>}></Route>
       <Route path="/services" element={<Services></Services>}></Route>
       <Route path="*" element={<NotFound></NotFound>}></Route>
-      <Route path="/reservewasher" element={<ReserveWasher></ReserveWasher>}></Route>
-      <Route path="/schedulepickUp" element={<SchedulePickUp></SchedulePickUp>}></Route>
+      <Route path="/reserve" element={<ReserveWasher></ReserveWasher>}></Route>
+      <Route path="/schedule" element={<SchedulePickUp></SchedulePickUp>}></Route>
     </Routes>
     <nav><Footer></Footer></nav>
   </>
